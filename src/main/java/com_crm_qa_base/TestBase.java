@@ -25,11 +25,11 @@ public class TestBase
 	    	try 
 				{
 					 prop = new Properties();
-<<<<<<< HEAD
-					 FileInputStream ip = new FileInputStream("G:\\Javaprogramming\\gitrepository\\Crm\\src\\main\\java\\com_crm_qa_config\\config.properties");
-=======
-					 FileInputStream ip = new FileInputStream("C:\\Users\\pranavc\\git\\flash\\Crm\\src\\main\\java\\com_crm_qa_config\\config.properties");
->>>>>>> e1bcb45040e52803a16f80632b39668fd53eb714
+
+					 FileInputStream ip = new FileInputStream("C:\\Users\\Parag\\git\\freecrmgit\\Crm\\src\\main\\java\\com_crm_qa_config\\config.properties");
+
+					 
+
 					prop.load(ip);
 				} 
 	    	catch (Exception e) 
@@ -45,7 +45,7 @@ public class TestBase
 		  String browsername=prop.getProperty("browser");
 			 if(browsername.equals("firefox"))
 			 {
-				 System.setProperty("webdriver.gecko.driver","C:\\Parag\\Selenium\\Selenium Setup\\chrome exe for 65\\chromedriver.exe");
+				 System.setProperty("webdriver.gecko.driver","G:\\Javaprogramming\\Selenium\\Selenium Setup\\chromedriver\\for 65\\chromedriver.exe");
 					driver = new FirefoxDriver(); 
 			 }
 			 else if(browsername.equals("chrome"))
