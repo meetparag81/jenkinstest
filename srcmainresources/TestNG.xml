@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Crmtest" parallel="tests" thread-count="2">
+<listeners>
+		<listener class-name="com_crm_qa_ExtendReport.ExtentReporterNG" />
+	</listeners>
+<test name="crmtestcases">	
+		<classes>
+			<class name="com_crm_qa_test.HomePageTest" />
+			<class name="com_crm_qa_test.LoginPageTest" />
+			 <class name="com_crm_qa_test.ContactPageTest" />
+		</classes>
+	</test>
+</suite>

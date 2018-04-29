@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Freecrmapplicationtest]">
+  <listeners>
+    <listener class-name="com_crm_qa_ExtendReport.ExtentReporterNG"/>
+  </listeners>
+  <test name="crmtestcases(failed)">
+    <classes>
+      <class name="com_crm_qa_test.HomePageTest">
+        <methods>
+          <include name="verifyContactsLinkTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="setUp"/>
+          <include name="verifyHomePageTitleTest"/>
+        </methods>
+      </class> <!-- com_crm_qa_test.HomePageTest -->
+      <class name="com_crm_qa_test.ContactPageTest">
+        <methods>
+          <include name="verifyContactsPageLabel"/>
+          <include name="setUp"/>
+          <include name="selectSingleContactsTest"/>
+          <include name="validateCreateNewContact"/>
+          <include name="selectMultipleContactsTest"/>
+        </methods>
+      </class> <!-- com_crm_qa_test.ContactPageTest -->
+      <class name="com_crm_qa_test.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com_crm_qa_test.LoginPageTest -->
+    </classes>
+  </test> <!-- crmtestcases(failed) -->
+</suite> <!-- Failed suite [Freecrmapplicationtest] -->
