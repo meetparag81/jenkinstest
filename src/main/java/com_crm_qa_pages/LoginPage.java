@@ -1,5 +1,6 @@
 package com_crm_qa_pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,9 @@ public class LoginPage extends TestBase
 	@FindBy(xpath="//input[@type='submit']")
 	@CacheLookup
 	WebElement loginbutton;
-	@FindBy(xpath ="//img[contains(@class,'img-responsive')]" )
+	@FindBy(xpath ="//td[@class='logo_text']")
+			//"//img[contains(@class,'img-responsive')]" )
+	
 	
 	WebElement crmlogo;
 	@FindBy(xpath="//input[@type='submit'][@value='Login']")
@@ -42,7 +45,10 @@ public class LoginPage extends TestBase
 		password.sendKeys(psw);
 		System.out.println(loginbutton.isEnabled());
 		System.out.println(loginbutton.isDisplayed());
-		loginbutton.click();
+		//loginbutton.click();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+    	js.executeScript("arguments[0].click();", loginbutton);
+		
 		return new HomePage();
 		
 	}

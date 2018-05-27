@@ -11,8 +11,6 @@
           <include name="loginPageTitleTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="loginTest"/>
-          <include name="crmLogoImageTest"/>
         </methods>
       </class> <!-- com_crm_qa_test.LoginPageTest -->
       <class name="com_crm_qa_test.ContactPageTest">
