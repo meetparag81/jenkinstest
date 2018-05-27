@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Failed suite [Crmtest]" parallel="tests">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Crmtest]" parallel="tests">
   <listeners>
     <listener class-name="com_crm_qa_ExtendReport.ExtentReporterNG"/>
   </listeners>
-  <test name="crmtestcases(failed)" parallel="tests">
+  <test thread-count="2" name="crmtestcases(failed)" parallel="tests">
     <classes>
-      <class name="com_crm_qa_test.HomePageTest">
+      <class name="com_crm_qa_test.LoginPageTest">
         <methods>
-          <include name="verifyContactsLinkTest"/>
-          <include name="verifyUserNameTest"/>
-          <include name="verifyHomePageTitleTest"/>
+          <include name="loginPageTitleTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginTest"/>
+          <include name="crmLogoImageTest"/>
         </methods>
-      </class> <!-- com_crm_qa_test.HomePageTest -->
+      </class> <!-- com_crm_qa_test.LoginPageTest -->
       <class name="com_crm_qa_test.ContactPageTest">
         <methods>
           <include name="verifyContactsPageLabel"/>
+          <include name="setUp"/>
+          <include name="teardown"/>
           <include name="selectSingleContactsTest"/>
           <include name="validateCreateNewContact"/>
           <include name="selectMultipleContactsTest"/>
         </methods>
       </class> <!-- com_crm_qa_test.ContactPageTest -->
-      <class name="com_crm_qa_test.LoginPageTest">
+      <class name="com_crm_qa_test.HomePageTest">
         <methods>
-          <include name="loginPageTitleTest"/>
+          <include name="verifyContactsLinkTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="loginTest"/>
-          <include name="crmLogoImageTest"/>
+          <include name="verifyHomePageTitleTest"/>
         </methods>
-      </class> <!-- com_crm_qa_test.LoginPageTest -->
+      </class> <!-- com_crm_qa_test.HomePageTest -->
     </classes>
   </test> <!-- crmtestcases(failed) -->
 </suite> <!-- Failed suite [Crmtest] -->

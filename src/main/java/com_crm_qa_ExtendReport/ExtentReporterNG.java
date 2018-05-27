@@ -29,17 +29,13 @@ public class ExtentReporterNG implements IReporter
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) 
 	{
-		extent = new ExtentReports(outputDirectory + File.separator
-<<<<<<< HEAD
-				+ "CRM_Extent.html", true);
-=======
-				+ "CRM123_Extent.html", true);
->>>>>>> e1bcb45040e52803a16f80632b39668fd53eb714
-
-		for (ISuite suite : suites) {
+		extent = new ExtentReports(outputDirectory + File.separator	+ "CrM_Extent.html", true);
+	 for (ISuite suite : suites) 
+	 {
 			Map<String, ISuiteResult> result = suite.getResults();
 
-			for (ISuiteResult r : result.values()) {
+			for (ISuiteResult r : result.values()) 
+			{
 				ITestContext context = r.getTestContext();
 
 				buildTestNodes(context.getPassedTests(), LogStatus.PASS);
@@ -51,6 +47,7 @@ public class ExtentReporterNG implements IReporter
 		extent.flush();
 		extent.close();
 	}
+	
 
 	private void buildTestNodes(IResultMap tests, LogStatus status) 
 	{
